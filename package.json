@@ -1,0 +1,27 @@
+{
+  "name": "vulcom-xss",
+  "version": "1.0.0",
+  "description": "Desafio CTF de Cross-Site Scripting (XSS) para o projeto VULCOM",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "cookie-parser": "^1.4.7",
+    "ejs": "latest",
+    "express": "latest",
+    "sqlite3": "latest"
+  },
+  "devDependencies": {
+    "nodemon": "latest"
+  },
+  "keywords": [
+    "ctf",
+    "security",
+    "xss",
+    "vulcom"
+  ],
+  "author": "",
+  "license": "MIT"
+}
