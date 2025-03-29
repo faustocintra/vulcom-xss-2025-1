@@ -46,6 +46,8 @@
             text-align: left;
         }
     </style>
+    <!-- Solução para XSS usando CSP (Content Security Policy) -->
+    <!-- meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" -->
 </head>
 <body>
     <div class="container">
@@ -57,7 +59,10 @@
         <div class="comments">
             <h3>Comentários:</h3>
             <% comments.forEach(comment => { %>
-                <p><%- comment.content %></p> <!-- VULNERÁVEL A XSS -->
+                <!-- <p><%- comment.content %></p> --> <!-- VULNERÁVEL A XSS --> 
+                
+                <!-- Seguro contra XSS: usando a tag %= -->
+                <p><%= comment.content %></p> <!-- VULNERÁVEL A XSS -->
             <% }); %>
         </div>
     </div>
